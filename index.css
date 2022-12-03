@@ -1,0 +1,150 @@
+/* Import Raleway Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Body CSS */
+body {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+    font-family: 'Raleway', sans-serif; /* Raleway Font */
+    background-color: black;
+}
+
+/* Heading 1 CSS (Audios Recorder Prototype) */
+h1{
+    margin-bottom: 30px;
+}
+
+/* Heading 1 CSS (Audios Recorded) */
+h2 {
+    margin-top: 40px;
+}
+
+/* Bold Text CSS */
+b{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+/* Record Status Div CSS */
+#record-status {
+	color: rgb(255, 0, 0);
+	padding: 5px;
+	margin: 6px auto;
+	width: fit-content;
+    font-size: 18px;
+}
+
+/* Buttons CSS (both start record and stop record button) */
+button {
+    margin: 20px 10px;
+    outline: none;
+    border-radius: 50%;
+}
+
+/* Microphone Image */
+button img {
+    max-width: 400px;
+}
+
+/* Microphone Recording Animation */
+@keyframes recordingAnim {
+
+    /* 10 degree rotation of Microphone */
+    from,to {
+      transform: rotate(10deg);
+    }
+
+    /* -10 degree rotation of Microphone */
+    50% {
+      transform: rotate(-10deg);
+    }
+}
+
+/* isRecording Class of Button (this class is added when recording has started; done through JavaScript) */
+button.isRecording {
+
+    /* Set Box Shadow of Button */
+    box-shadow: 0 0 0 4px rgb(0, 107, 115), 0 0 0 10px rgba(69, 161, 255, 0.3);
+}
+
+/* isRecording Class of Button Image (this class is added when recording has started; done through JavaScript) */
+button.isRecording img {
+
+    /* Set Infinite Animation of Button Image to Recording Animation */
+    animation: recordingAnim 0.7s ease infinite;
+}
+
+/* Audio Subheadings Div CSS */
+.aud_subheading{
+    padding: 5px;
+    margin: 6px auto;
+}
+
+/* Audio Format Buttons Div CSS */
+.aud_format_buttons{
+    margin-bottom: 50px;
+}
+
+/* Text Input CSS */
+input[type="text"]{
+    background-color: rgba(0, 107, 115, 0.266);
+    color: white;
+    border-radius: 20px;
+    width: 200px;
+    height: 16px;
+    border: 2px solid white;
+    transition: 0.2s all linear;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* Radio Button Input CSS */
+input[type="radio"]{
+    appearance: none;
+    background-color: rgba(0, 107, 115, 0.266);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+}
+
+/* Checked Radio Button Input CSS */
+input:checked{
+    border: 4px solid white;
+    background-color: rgb(0, 148, 189);
+}
+
+/* Radio Button Label CSS */
+label{
+    font-size: 18px;
+}
+
+/* Recorded Audios DIV */
+#recorded_audios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Audio CSS */
+audio {
+    margin: 30px auto;
+    transition:all 0.5s linear;
+    box-shadow: 5px 5px 3px 0px rgb(0, 107, 115);
+    border-radius: 50px
+}
+
+/* Audio Hover, Focus, and Active CSS */
+audio:hover, audio:focus, audio:active {
+    transform: scale(1.1);
+}
+
+/* Download Links CSS */
+a {
+	color: lightblue;
+    padding-bottom: 30px;
+}

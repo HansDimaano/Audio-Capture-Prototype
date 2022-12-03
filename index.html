@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Use meta to modify the charset, name, and content -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Link main CSS to index page-->
+	<link rel="stylesheet" href="index.css">
+
+	<!-- Title the page to Audio Capture Prototype -->
+	<title>Audio Capture Prototype</title>
+</head>
+
+<body>
+
+	<!-- Audio Capture Prototype Main Heading -->
+	<h1> Audio Capture Prototype </h1>
+
+	<!-- Microphone Button -->
+	<button type="button" id="mic_button">
+
+		<!-- Microphone Image -->
+		<img src="assets/mic_icon.png">
+	</button>
+
+	<!-- Record Status DIV -->
+	<div id="record-status">
+
+		<!-- Not Recording Status -->
+		<b>Status: </b>Not Recording
+	</div>
+
+	<!-- Audio File Name Input DIV -->
+	<div class="aud_subheading">
+		<b>Audio File Name:  </b>
+		
+		<!-- Audio File Name Text Input -->
+		<input type="text" id="file_name" value="My Amazing Audio Recording">
+	</div>
+
+	<!-- Audio File Format Radio Buttons DIV -->
+	<div class="aud_subheading" style="margin-bottom: 50px;">
+		<b>Audio File Format:</b>
+
+		<!-- MP3 (mpeg) Radio Button -->
+		<input type="radio" name="audio_file_format" value="mpeg" id="mpeg" checked>
+		<label for="mpeg">.mpeg</label>
+
+		<!-- WAV Radio Button -->
+		<input type="radio" name="audio_file_format" value="wav" id="wav">
+		<label for="wav">.wav</label>
+
+		<!-- OGG Radio Button -->
+		<input type="radio" name="audio_file_format" value="ogg" id="ogg">
+		<label for="ogg">.ogg</label>
+	</div>
+	
+	<!-- Audios Recorded Subheading (hidden at first; will be visible when a recording has been done; will be visible through JavaScript) -->
+	<h2 style="display: none" id="auds-recorded">Audios Recorded:</h2>
+
+	<!-- Recorded Audios DIV -->
+	<div id="recorded_audios">
+
+		<!-- The recorded audios and its download link will be appended at the bottom of the page wrapper through JavaScript -->
+		<!-- The code added looks like the code below: -->
+		
+		<!-- 
+			<audio id="recorded-audio" controls></audio>
+
+			<a href="" > Download Audio </a>
+		-->
+	</div>
+
+	<!-- Link the Audio Capture API JavaScript -->
+	<script src="AudioCaptureAPI.js"></script>
+
+</body>
+</html>
